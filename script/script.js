@@ -67,3 +67,12 @@ document.getElementById('apply-btn').addEventListener('click',function(){
     console.log('invalid')
   }
 })
+
+const spanTotal = document.getElementById('span-total');
+const spanDiscount = document.getElementById('span-discount');
+const spanGrandTotal = document.getElementById('span-grand-total');
+function calculate(){
+    const total = parseInt(spanTotal.innerText);
+    const discount = parseInt(spanDiscount.innerText);
+    const grandTotal = parseInt(spanGrandTotal.innerText);
+}
