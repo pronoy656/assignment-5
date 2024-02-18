@@ -7,7 +7,7 @@ for(const btn of allBtn){
         seat = seat + 1;
         seatLeft = seatLeft - 1;
 // console.log(e.target)
-e.target.classList.add('bg-green-400')
+e.target.classList.add('bg-green-400');
        
 
         const seatName = e.target.innerText;
