@@ -75,18 +75,3 @@ document.getElementById('apply-btn').addEventListener('click',function(){
    return alert ('INVALID COUPON');
   }
 })
-
-// document.getElementById('apply-btn').addEventListener('click',function(){
-    
-//     const inputValue =   document.getElementById('input-text').value
-//     const couponCode = inputValue.split(' ').join('')
-//     if(couponCode === 'Couple 20'){
-//       const discount = document.getElementById('discount');
-//       const discountAmount = convertGrandTOtal * 0.2;
-//       discount.innerText = discountAmount;
-  
-//     }
-//     else{
-//      return alert ('INVALID COUPON');
-//     }
-//   })
