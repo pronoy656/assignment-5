@@ -37,19 +37,33 @@ e.target.classList.add('bg-green-400');
          const totalCost = document.getElementById('total-cost').innerText;
          const convertTotalCost = parseInt(totalCost);
          document.getElementById('total-cost').innerText =  convertTotalCost + parseInt(ticketPrice ) ;
-          
+
          const grandTotal = document.getElementById('grand-total').innerText;
          const convertGrandTOtal = parseInt(grandTotal);
          document.getElementById('grand-total').innerText = convertGrandTOtal + parseInt(ticketPrice );
 
-         
+
         if(seat > 4){
               return alert('YOU CAN"T CHOOSE MORE THEN 4');
         }
-
 
         document.getElementById('seat-number').innerText = seat;
         document.getElementById('seat-left').innerText = seatLeft;
     })
 
 }
+
+
+document.getElementById('apply-btn').addEventListener('click',function(){
+  const inputValue =   document.getElementById('input-text').value
+  const couponCode = inputValue.split(' ').join('')
+  if(couponCode === 'NEW15'){
+    const discount = document.getElementById('discount');
+    const discountAmount = 'convertTotalCost' + parseInt(ticketPrice ) * 0.15;
+    discount.innerText = discountAmount;
+
+  }
+  else{
+    console.log('invalid')
+  }
+})
