@@ -1,10 +1,15 @@
 const allBtn = document.getElementsByClassName('btn-click');
 let seat = 0;
 let seatLeft = 40;
+let convertGrandTOtal =0;
 for(const btn of allBtn){
 
     btn.addEventListener('click',function (e){
         seat = seat + 1;
+        
+        if(seat > 4){
+            return alert('YOU CAN"T CHOOSE MORE THEN 4');
+      }
         seatLeft = seatLeft - 1;
 // console.log(e.target)
 e.target.classList.add('bg-green-400');
@@ -39,13 +44,9 @@ e.target.classList.add('bg-green-400');
          document.getElementById('total-cost').innerText =  convertTotalCost + parseInt(ticketPrice ) ;
 
          const grandTotal = document.getElementById('grand-total').innerText;
-         const convertGrandTOtal = parseInt(grandTotal);
+          convertGrandTOtal = parseInt(grandTotal);
          document.getElementById('grand-total').innerText = convertGrandTOtal + parseInt(ticketPrice );
 
-
-        if(seat > 4){
-              return alert('YOU CAN"T CHOOSE MORE THEN 4');
-        }
 
         document.getElementById('seat-number').innerText = seat;
         document.getElementById('seat-left').innerText = seatLeft;
@@ -55,24 +56,37 @@ e.target.classList.add('bg-green-400');
 
 
 document.getElementById('apply-btn').addEventListener('click',function(){
+    
   const inputValue =   document.getElementById('input-text').value
   const couponCode = inputValue.split(' ').join('')
   if(couponCode === 'NEW15'){
     const discount = document.getElementById('discount');
-    const discountAmount = 'convertTotalCost' + parseInt(ticketPrice ) * 0.15;
+    const discountAmount = convertGrandTOtal * 0.15;
+    discount.innerText = discountAmount;
+
+  }
+ else if(couponCode === 'Couple 20'){
+    const discount = document.getElementById('discount');
+    const discountAmount = convertGrandTOtal * 0.2;
     discount.innerText = discountAmount;
 
   }
   else{
-    console.log('invalid')
+   return alert ('INVALID COUPON');
   }
 })
 
-const spanTotal = document.getElementById('span-total');
-const spanDiscount = document.getElementById('span-discount');
-const spanGrandTotal = document.getElementById('span-grand-total');
-function calculate(){
-    const total = parseInt(spanTotal.innerText);
-    const discount = parseInt(spanDiscount.innerText);
-    const grandTotal = parseInt(spanGrandTotal.innerText);
-}
+// document.getElementById('apply-btn').addEventListener('click',function(){
+    
+//     const inputValue =   document.getElementById('input-text').value
+//     const couponCode = inputValue.split(' ').join('')
+//     if(couponCode === 'Couple 20'){
+//       const discount = document.getElementById('discount');
+//       const discountAmount = convertGrandTOtal * 0.2;
+//       discount.innerText = discountAmount;
+  
+//     }
+//     else{
+//      return alert ('INVALID COUPON');
+//     }
+//   })
