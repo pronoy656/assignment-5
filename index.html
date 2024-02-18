@@ -172,7 +172,7 @@
                 <img src="images/seat-green.png" alt="" />
               </div>
               <div>
-                <p><span>40</span> Seats left</p>
+                <p><span id="seat-left">40</span> Seats left</p>
               </div>
             </div>
           </div>
@@ -201,7 +201,7 @@
 
             <div class="mt-20">
               <img src="images/fare.png" alt="" />
-              <p>550 Taka</p>
+              <p><span id="ticket-price">550</span> Taka</p>
               <p>Per Seat</p>
             </div>
           </div>
@@ -232,128 +232,208 @@
                   <p>Selected</p>
                 </div>
               </div>
-              <div class="flex gap-x-20">
-                <div class="grid grid-cols-2 space-y-6 space-x-9">
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+              <div class="flex gap-x-28 mt-16">
+                <div class="grid grid-cols-2 gap-y-6 gap-x-9">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     A1
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     A2
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     B1
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     B2
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     C1
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     C2
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     D1
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     D2
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     E1
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     E2
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     F1
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     F2
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     G1
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     G2
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     H1
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     H2
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     I1
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     I2
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     J1
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     J2
                   </button>
                 </div>
-                <div class="grid grid-cols-2 space-y-6 space-x-9">
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                <div class="grid grid-cols-2 gap-y-6 gap-x-9">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     A3
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     A4
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     B3
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     B4
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     C3
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     C4
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     D3
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     D4
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     E3
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     E4
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     F3
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     F4
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     G3
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     G4
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     H3
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     H4
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     I3
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     I4
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     J3
                   </button>
-                  <button class="bg-slate-800 text-white px-6 py-3 rounded-xl">
+                  <button
+                    class="btn-click bg-slate-800 text-white px-6 py-3 rounded-xl"
+                  >
                     J4
                   </button>
                 </div>
@@ -364,13 +444,17 @@
               <p>Select Your Seat</p>
               <div class="w-[425px] bg-green-300">
                 <div class="grid grid-cols-3 justify-around p-8">
-                  <p>Seat<sup class="text-base">0</sup></p>
-                  <p>Class</p>
+                  <p>Seat<sup id="seat-number" class="text-base">0</sup></p>
+                  <p>Class <span id="class">Economoy</span></p>
                   <p>Price</p>
+                  <ul id="selected-container">
+                    <li class="flex"></li>
+                  </ul>
                 </div>
+
                 <div class="flex space-x-44 px-7">
                   <p>Total Price</p>
-                  <p>BDT <span>0</span></p>
+                  <p>BDT <span id="total-cost">0</span></p>
                 </div>
                 <div class="px-9 py-4 relative">
                   <input
@@ -384,7 +468,7 @@
                 </div>
                 <div class="flex space-x-44 px-7">
                   <p>Grand Total</p>
-                  <p>BDT<span>0</span></p>
+                  <p>BDT<span id="grand-total">0</span></p>
                 </div>
               </div>
               <div>
@@ -461,5 +545,6 @@
         </div>
       </section>
     </section>
+    <script src="script/script.js"></script>
   </body>
 </html>
