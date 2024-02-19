@@ -464,7 +464,7 @@
             <div class="w-[430px] bg-white rounded-2xl p-2">
               <p class="text-2xl font-semibold">Select Your Seat</p>
               <div class="border-b-2 mt-4"></div>
-              <div class="w-[420px] bg-[#f7f8f8] rounded-xl mt-12">
+              <div class="w-[415px] bg-[#f7f8f8] rounded-xl mt-12 ml-0">
                 <div class="grid grid-cols-3 justify-around p-8">
                   <p class="text-base font-medium">
                     Seat<sup
@@ -567,12 +567,31 @@
                   <div class="modal-action">
                     <form method="dialog">
                       <div class="justify-center items-center">
-                        <button class="btn bg-[#27ae60]">Continue</button>
+                        <button id="reload" class="btn bg-[#27ae60]">Continue</button>
                       </div>
                     </form>
                   </div>
                 </div>
               </dialog>
+              <!-- You can open the modal using ID.showModal() method -->
+              <!-- <div class="w-[420px]">
+                <button class="btn" onclick="my_modal_4.showModal()">
+                  Next
+                </button>
+              </div>
+              <dialog id="my_modal_4" class="modal">
+                <div class="modal-box w-11/12 max-w-5xl">
+                  <h3 class="font-bold text-lg">Hello!</h3>
+                  <p class="py-4">Click the button below to close</p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button, it will close the modal -->
+                      <button class="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog> -->
+
               <div class="flex justify-between mt-6">
                 <p class="border-b-2 text-sm font-normal">
                   Terms and Conditions

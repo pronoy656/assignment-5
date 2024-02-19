@@ -80,6 +80,10 @@ document.getElementById('apply-btn').addEventListener('click',function(){
   }
 })
 
+document.getElementById('reload').addEventListener('click',function(){
+  window.location.reload();
+})
+
 // const input = document.getElementsByClassName('input-field');
 // const button = document.getElementById('next-button');
 
