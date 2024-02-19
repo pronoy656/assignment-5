@@ -80,6 +80,7 @@ document.getElementById('apply-btn').addEventListener('click',function(){
   }
 })
 
+// -----------window refresh-----
 document.getElementById('reload').addEventListener('click',function(){
   window.location.reload();
 })
