@@ -59,7 +59,7 @@ e.target.classList.add('bg-green-400');
 document.getElementById('apply-btn').addEventListener('click',function(){
     
   const inputValue =   document.getElementById('input-text').value
-  const couponCode = inputValue.split(' ').join('')
+  const couponCode = inputValue
   if(couponCode === 'NEW15'){
     const discount = document.getElementById('discount');
     const discountAmount = parseInt(document.getElementById('total-cost').innerText) * 0.15;
@@ -69,21 +69,22 @@ document.getElementById('apply-btn').addEventListener('click',function(){
 
   }
  else if(couponCode === 'Couple 20'){
-    const discount = document.getElementById('discount');
-    const discountAmount = convertGrandTOtal * 0.2;
-    discount.innerText = discountAmount;
-
+  const discount = document.getElementById('discount');
+  const discountAmount = parseInt(document.getElementById('total-cost').innerText) * 0.2;
+  discount.innerText = discountAmount;
+  const grandTotalPriceAfterCoupon =  document.getElementById('grand-total');
+  grandTotalPriceAfterCoupon.innerText =  document.getElementById('total-cost').innerText - discountAmount;
   }
   else{
    return alert ('INVALID COUPON');
   }
 })
 
-const input = document.getElementsByClassName('input-field');
-const button = document.getElementById('next-button');
+// const input = document.getElementsByClassName('input-field');
+// const button = document.getElementById('next-button');
 
-input.addEventListener('input',function(){
-     if(input.value.length > 3){
-       button.disabled = false;
-     }
-})
+// input.addEventListener('input',function(){
+//      if(input.value.length > 3){
+//        button.disabled = false;
+//      }
+// })
