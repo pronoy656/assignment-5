@@ -50,6 +50,7 @@ e.target.classList.add('bg-green-400');
 
         document.getElementById('seat-number').innerText = seat;
         document.getElementById('seat-left').innerText = seatLeft;
+
     })
 
 }
@@ -61,8 +62,10 @@ document.getElementById('apply-btn').addEventListener('click',function(){
   const couponCode = inputValue.split(' ').join('')
   if(couponCode === 'NEW15'){
     const discount = document.getElementById('discount');
-    const discountAmount = convertGrandTOtal * 0.15;
+    const discountAmount = parseInt(document.getElementById('total-cost').innerText) * 0.15;
     discount.innerText = discountAmount;
+    const grandTotalPriceAfterCoupon =  document.getElementById('grand-total');
+    grandTotalPriceAfterCoupon.innerText =  document.getElementById('total-cost').innerText - discountAmount;
 
   }
  else if(couponCode === 'Couple 20'){
@@ -74,4 +77,13 @@ document.getElementById('apply-btn').addEventListener('click',function(){
   else{
    return alert ('INVALID COUPON');
   }
+})
+
+const input = document.getElementsByClassName('input-field');
+const button = document.getElementById('next-button');
+
+input.addEventListener('input',function(){
+     if(input.value.length > 3){
+       button.disabled = false;
+     }
 })
