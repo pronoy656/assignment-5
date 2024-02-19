@@ -11,7 +11,7 @@ for(const btn of allBtn){
             return alert('YOU CAN"T CHOOSE MORE THEN 4');
       }
         seatLeft = seatLeft - 1;
-// console.log(e.target)
+
 e.target.classList.add('bg-green-400');
        
 
@@ -66,6 +66,9 @@ document.getElementById('apply-btn').addEventListener('click',function(){
     discount.innerText = discountAmount;
     const grandTotalPriceAfterCoupon =  document.getElementById('grand-total');
     grandTotalPriceAfterCoupon.innerText =  document.getElementById('total-cost').innerText - discountAmount;
+    document.getElementById('apply-btn').addEventListener('click',function(){
+      style.visibility = 'hidden';
+    })
 
   }
  else if(couponCode === 'Couple 20'){
@@ -84,12 +87,3 @@ document.getElementById('apply-btn').addEventListener('click',function(){
 document.getElementById('reload').addEventListener('click',function(){
   window.location.reload();
 })
-
-// const input = document.getElementsByClassName('input-field');
-// const button = document.getElementById('next-button');
-
-// input.addEventListener('input',function(){
-//      if(input.value.length > 3){
-//        button.disabled = false;
-//      }
-// })
